@@ -8,7 +8,8 @@ client/dist
 # local env files
 .env.local
 .env.*.local
-
+.env.development
+.env.production
 # ignore all env files for now
 .env
 
