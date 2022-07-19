@@ -1,8 +1,7 @@
-
 <template>
   <div>
     <VHeader />
-    wait what????
+      <router-view />
     <VFooter />
   </div>
 </template>
