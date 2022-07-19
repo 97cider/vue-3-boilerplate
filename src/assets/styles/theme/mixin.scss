@@ -1,0 +1,15 @@
+@import './themeVariable.scss';
+
+@mixin themify($themes) {
+    @each $theme-name,
+    $map in $themes {
+        $myMap: $map !global;
+        .theme-#{$theme-name} {
+            @content;
+        }
+    }
+}
+
+@function themed($key) {
+    @return map-get($myMap, $key)
+}

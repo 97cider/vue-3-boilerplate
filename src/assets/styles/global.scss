@@ -1,0 +1,12 @@
+@import './theme/variable.scss';
+@import './theme/mixin.scss';
+
+// BG Mix
+@mixin button($value:default) {
+    background-color: themed('theme-title-background');
+    color: themed('theme-title-color');
+}
+
+.test {
+    background-color: tomato;
+}

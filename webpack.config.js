@@ -2,7 +2,7 @@ const { VueLoaderPlugin } = require("vue-loader");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin  = require('mini-css-extract-plugin');
 const htmlWebpackPlugin  = require('html-webpack-plugin');
-const autoprefixer = require("autoprefixer");
+
 const path = require("path");
 
 require('dotenv').config()
@@ -43,25 +43,27 @@ module.exports = {
         },
       },
       {
-        test: /\.s?css$/,
+        test: /\.scss$/,
         use: [
-          "style-loader",
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          {
-            loader: "postcss-loader",
-            options: {
-              plugins: () => [autoprefixer()],
-            },
-          },
-          "sass-loader",
-        ],
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'vue-style-loader',
+          'css-loader'
+        ]
       },
     ],
   },
   plugins: [
     new VueLoaderPlugin(),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'style.css'
+    }),
     new htmlWebpackPlugin({
         template: path.resolve(__dirname, "public", "index.html"),
         favicon: "./public/favicon.ico",
