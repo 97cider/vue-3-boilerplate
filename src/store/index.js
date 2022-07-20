@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-const theme = require('./modules/theme');
+import theme from './modules/theme';
 
 export default createStore({
     modules: {
