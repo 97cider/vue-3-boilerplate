@@ -1,5 +1,7 @@
 <template>
-    <div class="test">
-        hello from the home page
+    <div class="death">
+        <div class="content">
+            hello from the home page
+        </div>
     </div>
 </template>

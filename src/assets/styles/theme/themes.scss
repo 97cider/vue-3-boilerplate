@@ -1,0 +1,15 @@
+@import './variables.scss';
+
+$themes:(
+    life:(
+        content: (
+            bg: $life-color,
+            color: $death-color
+        )
+    ),
+    death:(
+        content: (
+            bg: $death-color,
+            color: $life-color
+        )
+))

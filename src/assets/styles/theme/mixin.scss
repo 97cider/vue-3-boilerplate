@@ -1,15 +1,15 @@
-@import './themeVariable.scss';
-
-@mixin themify($themes) {
-    @each $theme-name,
-    $map in $themes {
-        $myMap: $map !global;
-        .theme-#{$theme-name} {
-            @content;
-        }
+@mixin themify($themes)
+{
+    @each $theme-name, $map in $themes {
+        @include theme($theme-name, map-get($map, "content", "bg"), map-get($map, "content", "color"));
     }
 }
 
-@function themed($key) {
-    @return map-get($myMap, $key)
+@mixin theme($name, $bgColor, $textColor) {
+    .#{$name}{
+        .content { 
+            background: $bgColor;
+            color: $textColor;
+        }
+    }
 }
