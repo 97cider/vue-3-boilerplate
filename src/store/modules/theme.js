@@ -16,7 +16,7 @@ const actions = {
 }
 
 const mutations = {
-    changeTheme (state, { theme })
+    changeTheme (state, theme)
     {
         state.currentTheme = theme;
     }

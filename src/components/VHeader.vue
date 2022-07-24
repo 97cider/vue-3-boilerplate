@@ -1,21 +1,23 @@
 <template>
     <div class="theme-title-background">
-        Yo this is a header!
-        <button>Toggle Light Mode {{ themeName }}</button>
+        Yo this is an updated header!
+        <ThemeToggle />
     </div>
 </template>
 
 <script setup>
-import { reactive, computed } from 'vue'
-import { useStore } from 'vuex'
+import { reactive, computed } from 'vue';
+import { useStore } from 'vuex';
+import ThemeToggle from './ThemeToggle.vue';
 
 const store = useStore();
 
-console.log(store.state.theme.currentTheme);
 
 const themeName = computed(() => {
   return `${store.state.theme.currentTheme}`;
 });
+
+
 </script>
 
 
