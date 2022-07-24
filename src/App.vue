@@ -1,8 +1,10 @@
 <template>
     <div :class="theme">
-      <VHeader />
-        <router-view />
-      <VFooter />
+      <div class="content">>
+        <VHeader />
+          <router-view />
+        <VFooter />
+      </div>
     </div>
 </template>
 
@@ -11,21 +13,19 @@
   import VFooter from './components/VFooter.vue';
   import { computed, onMounted, watch } from '@vue/runtime-core';
   import { useStore } from 'vuex';
-  const store = useStore();
 
-  onMounted(() => {
-    console.log('mounting main component');
-    if (localStorage.theme) {
-      console.log(`Local theme detected: Setting theme to ${localStorage.theme}`);
-      store.dispatch("theme/themeChange", localStorage.theme);
-    } else {
-      console.log(`No theme detected: Setting to ${store.state.theme.currentTheme}`);
-      localStorage.theme = store.state.theme.currentTheme;
-    }
-  });
+  const store = useStore();
 
   const theme = computed(() => {
     return store.state.theme.currentTheme;
+  });
+
+  onMounted(() => {
+    if (localStorage.theme) {
+      store.dispatch("theme/themeChange", localStorage.theme);
+    } else {
+      localStorage.theme = store.state.theme.currentTheme;
+    }
   });
 
   watch(theme, () => {
