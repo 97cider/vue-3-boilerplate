@@ -1,6 +1,6 @@
 <template>
     <div :class="theme">
-      <div class="content">>
+      <div class="content">
         <VHeader />
           <router-view />
         <VFooter />
@@ -11,7 +11,7 @@
 <script setup>
   import VHeader from './components/VHeader.vue';
   import VFooter from './components/VFooter.vue';
-  import { computed, onMounted, watch } from '@vue/runtime-core';
+  import { computed, onBeforeMount, watch } from '@vue/runtime-core';
   import { useStore } from 'vuex';
 
   const store = useStore();
@@ -20,7 +20,7 @@
     return store.state.theme.currentTheme;
   });
 
-  onMounted(() => {
+  onBeforeMount(() => {
     if (localStorage.theme) {
       store.dispatch("theme/themeChange", localStorage.theme);
     } else {

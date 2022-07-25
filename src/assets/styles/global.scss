@@ -3,3 +3,8 @@
 @import './theme/mixin.scss';
 
 @include themify($themes);
+
+body {
+    padding: 0px;
+    margin: 0px;
+}

@@ -1,43 +1,99 @@
 <template>
-    <div>
-        <button  @click="ToggleTheme">Toggle Light Mode {{ themeName }}</button>
-    </div>
+    <label class="toggle inverted">
+        <input v-model="isLife" type="checkbox" @click="toggleTheme"/>
+        <span class="path">
+          <div class="switch protected"></div>
+          <span class="toggle-icons">
+            <img class="toggle-icon" src="../assets/images/theme-moon.png">
+            <img class="toggle-icon" src="../assets/images/theme-sun.png">
+          </span>
+        </span>
+    </label>
 </template>
 
 <script setup>
-import { computed, onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useStore } from 'vuex'
 
-let isLife = false;
+const isLife = ref(false);
 const store = useStore();
 
-const themeName = computed(() => {
-  return `${store.state.theme.currentTheme}`;
-});
-
-const ToggleTheme = (() => {
-  if (isLife) {
-    ToggleDeath();
+const toggleTheme = (() => {
+  if (isLife.value) {
+    toggleDeath();
     return;
   }
-  ToggleLife();
+  toggleLife();
 });
 
-const ToggleLife = (() => {
+const toggleLife = (() => {
   store.dispatch('theme/themeChange', 'life');
-  isLife = true;
+  isLife.value = true;
 });
 
-const ToggleDeath = (() => {
+const toggleDeath = (() => {
     store.dispatch('theme/themeChange', 'death');
-    isLife = false;
+    isLife.value = false;
 });
 
 onMounted(() => {
-  isLife = store.state.theme.currentTheme === 'life' ? true : false;
+  isLife.value = store.state.theme.currentTheme === 'life' ? true : false;
 })
 </script>
 
 
 <style lang="scss">
+  input {
+    display: none;
+  }
+
+  .toggle {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    border-radius: 30px;
+    width: 68px;
+    height: 30px;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .path {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .switch {
+      width: 22px;
+      height: 22px;
+      border-radius: 100%;
+      transition: 0.4s ease-out;
+      z-index: 2;
+  }
+
+  .toggle-icons {
+    width: 85%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .toggle-icon {
+      width: 20px;
+      height: 20px;
+      z-index: 0;
+      margin-left: 5px;
+      margin-right: 5px;
+      pointer-events: none;
+  }
+
+  input:checked + .path > .switch {
+    transform: translateX(36px);
+  }
+
 </style>

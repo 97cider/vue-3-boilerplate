@@ -2,14 +2,16 @@
 
 $themes:(
     life:(
+        bg: $life-color,
         content: (
             bg: $life-color,
-            color: $death-color
+            color: $death-color,
         )
     ),
     death:(
+        bg: $death-color,
         content: (
             bg: $death-color,
-            color: $life-color
+            color: $life-color,
         )
 ))

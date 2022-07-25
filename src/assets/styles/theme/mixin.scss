@@ -1,3 +1,4 @@
+// TODO: use better mapping for theme props
 @mixin themify($themes)
 {
     @each $theme-name, $map in $themes {
@@ -7,9 +8,23 @@
 
 @mixin theme($name, $bgColor, $textColor) {
     .#{$name}{
+        background: $bgColor;
+        transition: all .2s ease-in;
+        height:100vh;
+        overflow-y: auto;
         .content { 
             background: $bgColor;
             color: $textColor;
+            transition: all .2s ease-in;
+            border-color: $textColor;
+        }
+        .content .protected {
+            background: $bgColor;
+            color: $textColor;
+        }
+        .content .inverted {
+            background: $textColor;
+            color: $bgColor;
         }
     }
 }
