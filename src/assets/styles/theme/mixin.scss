@@ -2,20 +2,22 @@
 @mixin themify($themes)
 {
     @each $theme-name, $map in $themes {
-        @include theme($theme-name, map-get($map, "content", "bg"), map-get($map, "content", "color"));
+        @include theme($theme-name, map-get($map, "content", "bg"), map-get($map, "content", "color"), map-get($map, "content", "lightColor"));
     }
 }
 
-@mixin theme($name, $bgColor, $textColor) {
+@mixin theme($name, $bgColor, $textColor, $lightColor) {
     .#{$name}{
         background: $bgColor;
-        transition: all .2s ease-in;
+        transition: color .2s ease-in;
+        transition: background .2s ease-in;
         height:100vh;
         overflow-y: auto;
         .content { 
             background: $bgColor;
             color: $textColor;
-            transition: all .2s ease-in;
+            transition: color .2s ease-in;
+            transition: background .2s ease-in;
             border-color: $textColor;
         }
         .content .protected {
@@ -25,6 +27,12 @@
         .content .inverted {
             background: $textColor;
             color: $bgColor;
+        }
+        .content .light {
+            color: $lightColor;
+        }
+        .content:link {
+            color: $textColor;
         }
     }
 }

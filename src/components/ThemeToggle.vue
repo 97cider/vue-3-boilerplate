@@ -1,8 +1,8 @@
 <template>
-    <label class="toggle inverted">
+    <label class="toggle protected">
         <input v-model="isLife" type="checkbox" @click="toggleTheme"/>
         <span class="path">
-          <div class="switch protected"></div>
+          <div class="switch inverted"></div>
           <span class="toggle-icons">
             <img class="toggle-icon" src="../assets/images/theme-moon.png">
             <img class="toggle-icon" src="../assets/images/theme-sun.png">
@@ -51,9 +51,10 @@ onMounted(() => {
     position: relative;
     display: inline-block;
     align-items: center;
+    margin-top: 5px;
     border-radius: 30px;
-    width: 68px;
-    height: 30px;
+    min-width: 60px;
+    height: 24px;
     user-select: none;
     cursor: pointer;
   }
@@ -69,8 +70,8 @@ onMounted(() => {
   }
 
   .switch {
-      width: 22px;
-      height: 22px;
+      width: 18px;
+      height: 18px;
       border-radius: 100%;
       transition: 0.4s ease-out;
       z-index: 2;
@@ -84,8 +85,8 @@ onMounted(() => {
   }
 
   .toggle-icon {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       z-index: 0;
       margin-left: 5px;
       margin-right: 5px;
@@ -93,7 +94,7 @@ onMounted(() => {
   }
 
   input:checked + .path > .switch {
-    transform: translateX(36px);
+    transform: translateX(32px);
   }
 
 </style>

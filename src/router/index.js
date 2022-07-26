@@ -18,6 +18,8 @@ const routes = [
 const router = createRouter({
     history: createWebHashHistory(),
     routes,
+    linkActiveClass: "light",
+    linkExactActiveClass: "light"
 })
 
 export { 
