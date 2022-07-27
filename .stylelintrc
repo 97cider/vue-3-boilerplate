@@ -7,6 +7,6 @@
         {
           "files": ["*.vue", "**/*.vue"],
           "customSyntax": "postcss-html"
-        },
+        }
     ]
 }
