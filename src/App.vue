@@ -14,6 +14,7 @@
   import { computed, onBeforeMount, watch} from '@vue/runtime-core';
   import { useStore } from 'vuex';
   import { useI18n } from 'vue-i18n';
+  import { loadLanguageAsync } from './locales';
 
   const store = useStore();
   const { locale } = useI18n({ useScope: 'global' });
@@ -45,7 +46,8 @@
 
   watch(vLocale, () => {
     localStorage.locale = store.state.locale.currentLocale;
-    locale.value = localStorage.locale;
+    // locale.value = localStorage.locale;
+    loadLanguageAsync(localStorage.locale);
   })
 
   computed(() => {
