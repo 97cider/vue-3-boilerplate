@@ -2,14 +2,10 @@
     <div class="nav-bar">
         <router-link class="nav-item" :to="{ path: '/home' }"><h3>home</h3></router-link>
         <router-link class="nav-item" :to="{ path: '/about' }"><h3>about</h3></router-link>
-        <div class="nav-item">
-            <NavDropDownVue :routes="['test1', 'test2', 'test3']" />
-        </div>
     </div>
 </template>
 
 <script setup>
-import NavDropDownVue from './navDropDown/NavDropDown.vue';
 </script>
 
 <style lang="scss">

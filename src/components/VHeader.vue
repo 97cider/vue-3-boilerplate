@@ -5,6 +5,7 @@
         <div><h3 class="light">quick, simple, easy.</h3></div>
         <div class="gutter"></div>
         <div class="header-item"><NavBar /></div>
+        <div class="header-item"><LanguageDropdown/></div>
         <div class="header-item"><ThemeToggle /></div>
     </div>
 </template>
@@ -14,6 +15,7 @@ import { computed } from 'vue';
 import { useStore } from 'vuex';
 import ThemeToggle from './ThemeToggle.vue';
 import NavBar from './NavBar.vue';
+import LanguageDropdown from './LanguageDropdown.vue';
 
 const store = useStore();
 
@@ -33,6 +35,7 @@ const themeName = computed(() => {
   justify-content: space-between;
   padding: 5px;
   user-select: none;
+  font-family:'Franklin Gothic Medium', 'Arial', Arial, sans-serif;
 }
 
 .header-item {
