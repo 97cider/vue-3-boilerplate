@@ -1,3 +1,6 @@
 {
-    "hello": "hello!"
+    "hello": "hello!",
+    "header": {
+        "tagline": "quick, simple, easy."
+    }
 }

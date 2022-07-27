@@ -11,7 +11,13 @@ import { onMounted, computed } from '@vue/runtime-core';
 const {locale, t} = useI18n({ useScope: 'global' });
 const store = useStore();
 const defaultItem =  computed(() => {
-    return locales.find(isSelected);
+    let defaultLocale = locales.find(isSelected);
+    if (defaultLocale)
+    {
+        
+        return defaultLocale;
+    }
+    return locales[0];
 });
 
 const locales = [
@@ -26,18 +32,11 @@ const locales = [
 ]
 
 const UpdateLocale = ((lang) => {
+    console.log(`dispatching locale ${lang.locale}`);
     store.dispatch('locale/localeChange', lang.locale);
 });
 
 const isSelected = ((locales) => {
     return locales.locale === store.state.locale.currentLocale;
-})
-
-onMounted(() => {
-    defaultItem.value = locales.find(isSelected);
-    if (!defaultItem.value)
-    {
-        defaultItem.value = locales[0];
-    }
-})
+});
 </script>

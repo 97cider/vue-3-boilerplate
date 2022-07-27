@@ -45,7 +45,7 @@
 
   watch(vLocale, () => {
     localStorage.locale = store.state.locale.currentLocale;
-    locale.value = localStorage.locale.Locale;
+    locale.value = localStorage.locale;
   })
 
   computed(() => {
