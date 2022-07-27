@@ -4,7 +4,7 @@
     @include theme($theme-name,
     map-get($map, "content", "bg"),
       map-get($map, "content", "color"),
-      map-get($map, "content", "lightColor"));
+      map-get($map, "content", "light-color"));
   }
 }
 

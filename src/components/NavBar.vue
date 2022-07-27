@@ -16,6 +16,8 @@
 .nav-item {
   padding-left: 10px;
   padding-right: 10px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .nav-item:link {
