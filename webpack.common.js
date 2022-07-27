@@ -12,6 +12,7 @@ module.exports = {
     main: "./src/main.js",
   },
   output: {
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, "./dist/"),
   },
   module: {
@@ -68,6 +69,7 @@ module.exports = {
         template: path.resolve(__dirname, "public", "index.html"),
         favicon: "./public/favicon.ico",
         title: process.env.TITLE,
+        inject: true
       }),
     new CleanWebpackPlugin(),
   ],
@@ -75,12 +77,5 @@ module.exports = {
     alias: {
       vue: "@vue/runtime-dom"
     }
-  },
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'public'),
-    },
-    compress: true,
-    port: process.env.PORT,
-  },
+  }
 };

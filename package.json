@@ -4,9 +4,9 @@
   "description": "a very barebones vue-3 boilerplate for quick projects",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development",
-    "rebuild": "npm run build && npm run start"
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack serve --open --config webpack.dev.js",
+    "preview": "npm run build && http-server ./dist -d"
   },
   "keywords": [
     "vue3"
@@ -26,6 +26,7 @@
     "eslint-plugin-vue": "^9.2.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "http-server": "^13.0.2",
     "mini-css-extract-plugin": "^2.6.1",
     "node-sass": "^7.0.1",
     "postcss": "^8.4.14",
@@ -40,7 +41,8 @@
     "vuex": "^4.0.2",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.9.3"
+    "webpack-dev-server": "^4.9.3",
+    "webpack-merge": "^5.8.0"
   },
   "dependencies": {
     "vue": "^3.2.37",
