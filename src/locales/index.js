@@ -1,17 +1,15 @@
 import { createI18n } from 'vue-i18n'
+import messages  from './configs/en.js';
 
-import messages from './configs/en-US';
-// import kr from './configs/kr';
-
-const loadedLanguages = ['en-US'];
+const loadedLanguages = ['en'];
 
 const i18n = new createI18n({
-    locale: 'en-US ',
-    fallbackLocale: 'en-US',
+    locale: 'en',
+    fallbackLocale: 'en',
     legacy: false,
     globalInjection: true,
     allowComposition: true,
-    messages: messages
+    messages: messages,
 });
 
 const setLanguage = ((lang) => {
@@ -28,6 +26,7 @@ const loadLanguageAsync = ((lang) => {
     }
     return import(`./configs/${lang}.js`).then(
         messages => {
+            console.log(`Lazy Loading: ${lang}`);
             i18n.global.setLocaleMessage(lang, messages.default);
             loadedLanguages.push(lang);
             return setLanguage(lang);

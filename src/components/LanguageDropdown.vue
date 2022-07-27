@@ -23,7 +23,7 @@ const defaultItem =  computed(() => {
 const locales = [
     {
         key: 'en',
-        locale: 'en-US'
+        locale: 'en'
     },
     {
         key: '한국어',

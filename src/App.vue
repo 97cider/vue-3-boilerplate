@@ -38,6 +38,7 @@
     } else {
       localStorage.locale = store.state.locale.currentLocale;
     }
+    loadLanguageAsync(localStorage.locale).then(() => next());
   });
 
   watch(theme, () => {
@@ -46,8 +47,7 @@
 
   watch(vLocale, () => {
     localStorage.locale = store.state.locale.currentLocale;
-    // locale.value = localStorage.locale;
-    loadLanguageAsync(localStorage.locale);
+    loadLanguageAsync(localStorage.locale).then(() => next());
   })
 
   computed(() => {
