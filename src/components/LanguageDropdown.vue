@@ -6,9 +6,10 @@
 import HeaderDropDown from './header-drop-down/HeaderDropDown.vue';
 import { useI18n } from 'vue-i18n';
 import { useStore } from 'vuex';
-import { onMounted, computed } from '@vue/runtime-core';
+import { computed } from '@vue/runtime-core';
 
-const {locale, t} = useI18n({ useScope: 'global' });
+// eslint-disable-next-line no-unused-vars
+const { t } = useI18n({ useScope: 'global' });
 const store = useStore();
 const defaultItem =  computed(() => {
     let defaultLocale = locales.find(isSelected);

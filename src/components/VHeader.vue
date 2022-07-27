@@ -11,21 +11,13 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
-import { useStore } from 'vuex';
 import { useI18n } from 'vue-i18n';
 import ThemeToggle from './ThemeToggle.vue';
 import NavBar from './NavBar.vue';
 import LanguageDropdown from './LanguageDropdown.vue';
 
-const store = useStore();
+// eslint-disable-next-line no-unused-vars
 const { t } = useI18n({ useScope: 'global' });
-
-const themeName = computed(() => {
-  return `${store.state.theme.currentTheme}`;
-});
-
-
 </script>
 
 

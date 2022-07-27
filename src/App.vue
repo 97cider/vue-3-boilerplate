@@ -13,11 +13,9 @@
   import VFooter from './components/VFooter.vue';
   import { computed, onBeforeMount, watch} from '@vue/runtime-core';
   import { useStore } from 'vuex';
-  import { useI18n } from 'vue-i18n';
   import { loadLanguageAsync } from './locales';
 
   const store = useStore();
-  const { locale } = useI18n({ useScope: 'global' });
 
   const theme = computed(() => {
     return store.state.theme.currentTheme;

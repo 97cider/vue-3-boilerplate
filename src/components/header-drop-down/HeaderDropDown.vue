@@ -8,7 +8,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
 import HeaderDropDownItem from './HeaderDropDownItem.vue';
 const props = defineProps({
     items: [],
