@@ -1,28 +1,27 @@
-@import './theme/variables.scss';
-@import './theme/themes.scss';
-@import './theme/mixin.scss';
-
+@import "./theme/variables";
+@import "./theme/themes";
+@import "./theme/mixin";
 @include themify($themes);
 
 body {
-    padding: 0px;
-    margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
-    font-family:'Franklin Gothic Medium', 'Arial', Arial, sans-serif;
-    white-space: nowrap;
-    margin: 0px;
+  font-family: "Franklin Gothic Medium", Arial, sans-serif;
+  white-space: nowrap;
+  margin: 0;
 }
 
 h2 {
-    font-family:'Franklin Gothic Medium', 'Arial', Arial, sans-serif;
-    white-space: nowrap;
-    margin: 0px;
+  font-family: "Franklin Gothic Medium", Arial, sans-serif;
+  white-space: nowrap;
+  margin: 0;
 }
 
 h3 {
-    font-family:'Franklin Gothic Medium', 'Arial', Arial, sans-serif;
-    white-space: nowrap;
-    margin: 0px;
+  font-family: "Franklin Gothic Medium", Arial, sans-serif;
+  white-space: nowrap;
+  margin: 0;
 }

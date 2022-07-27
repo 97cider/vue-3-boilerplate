@@ -23,12 +23,12 @@ const { t } = useI18n({ useScope: 'global' });
 
 <style lang="scss">
 .header {
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 5px;
   user-select: none;
-  font-family:'Franklin Gothic Medium', 'Arial', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", Arial, sans-serif;
 }
 
 .header-item {

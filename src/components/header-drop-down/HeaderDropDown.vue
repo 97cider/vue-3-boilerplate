@@ -33,7 +33,7 @@ const selectItem = ((item) => {
 
 <style lang="scss">
 .dropdown-content {
-    position: absolute;
-    background: inherit;
+  position: absolute;
+  background: inherit;
 }
 </style>

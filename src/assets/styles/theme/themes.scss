@@ -1,19 +1,19 @@
-@import './variables.scss';
+@import "./variables";
 
-$themes:(
-    life:(
-        bg: $life-color,
-        content: (
-            bg: $life-color,
-            color: $death-color,
-            lightColor: $life-color-light,
-        )
-    ),
-    death:(
-        bg: $death-color,
-        content: (
-            bg: $death-color,
-            color: $life-color,
-            lightColor: $death-color-light,
-        )
-))
+$themes: (
+  life:(
+    bg: $life-color,
+    content: (
+      bg: $life-color,
+      color: $death-color,
+      lightcolor: $life-color-light,
+    )
+  ),
+  death:(
+    bg: $death-color,
+    content: (
+      bg: $death-color,
+      color: $life-color,
+      lightcolor: $death-color-light,
+    )
+  ));

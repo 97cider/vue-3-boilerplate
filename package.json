@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint --ext .js,.vue src",
+    "lint-style": "stylelint \"./src/**/*.vue\" \"./src/**/*.scss\" --fix",
     "start": "webpack serve --open --config webpack.dev.js",
     "preview": "npm run build && http-server ./dist -d"
   },
@@ -34,11 +35,15 @@
     "mini-css-extract-plugin": "^2.6.1",
     "node-sass": "^7.0.1",
     "postcss": "^8.4.14",
+    "postcss-html": "^1.5.0",
     "postcss-loader": "^7.0.1",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2",
     "serve": "^14.0.1",
     "style-loader": "^3.3.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-config-standard-scss": "^5.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "vue-eslint-parser": "^9.0.3",
     "vue-loader": "^17.0.0",

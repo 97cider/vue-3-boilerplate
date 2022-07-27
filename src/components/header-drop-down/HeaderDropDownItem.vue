@@ -5,7 +5,7 @@
 </template>
 
 <style lang="scss">
-    .dropdown-item {
-        padding: 10px;
-    }
+  .dropdown-item {
+    padding: 10px;
+  }
 </style>

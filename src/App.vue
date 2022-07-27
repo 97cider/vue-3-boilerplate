@@ -55,9 +55,9 @@
 </script>>
 
 <style lang="scss">
-  @import './assets/styles/global.scss';
+  @import "./assets/styles/global";
 
   #app {
-    display:block;
+    display: block;
   }
 </style>

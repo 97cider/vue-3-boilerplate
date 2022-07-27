@@ -10,17 +10,20 @@
 
 <style lang="scss">
 .nav-bar {
-    display: flex;
+  display: flex;
 }
+
 .nav-item {
-    padding-left: 10px;
-    padding-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
+
 .nav-item:link {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
+
 .nav-item.router-link-exact-active {
-   cursor: pointer;
- }
+  cursor: pointer;
+}
 </style>

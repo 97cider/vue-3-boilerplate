@@ -70,11 +70,11 @@ onMounted(() => {
   }
 
   .switch {
-      width: 18px;
-      height: 18px;
-      border-radius: 100%;
-      transition: 0.4s ease-out;
-      z-index: 2;
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    transition: 0.4s ease-out;
+    z-index: 2;
   }
 
   .toggle-icons {
@@ -85,12 +85,12 @@ onMounted(() => {
   }
 
   .toggle-icon {
-      width: 18px;
-      height: 18px;
-      z-index: 0;
-      margin-left: 5px;
-      margin-right: 5px;
-      pointer-events: none;
+    width: 18px;
+    height: 18px;
+    z-index: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    pointer-events: none;
   }
 
   input:checked + .path > .switch {

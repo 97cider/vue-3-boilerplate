@@ -1,38 +1,45 @@
 // TODO: use better mapping for theme props
-@mixin themify($themes)
-{
-    @each $theme-name, $map in $themes {
-        @include theme($theme-name, map-get($map, "content", "bg"), map-get($map, "content", "color"), map-get($map, "content", "lightColor"));
-    }
+@mixin themify($themes) {
+  @each $theme-name, $map in $themes {
+    @include theme($theme-name,
+    map-get($map, "content", "bg"),
+      map-get($map, "content", "color"),
+      map-get($map, "content", "lightColor"));
+  }
 }
 
 @mixin theme($name, $bgColor, $textColor, $lightColor) {
-    .#{$name}{
-        background: $bgColor;
-        transition: color .2s ease-in;
-        transition: background .2s ease-in;
-        height:100vh;
-        overflow-y: auto;
-        .content { 
-            background: $bgColor;
-            color: $textColor;
-            transition: color .2s ease-in;
-            transition: background .2s ease-in;
-            border-color: $textColor;
-        }
-        .content .protected {
-            background: $bgColor;
-            color: $textColor;
-        }
-        .content .inverted {
-            background: $textColor;
-            color: $bgColor;
-        }
-        .content .light {
-            color: $lightColor;
-        }
-        .content:link {
-            color: $textColor;
-        }
+  .#{$name} {
+    background: $bgColor;
+    transition: color 0.2s ease-in;
+    transition: background 0.2s ease-in;
+    height: 100vh;
+    overflow-y: auto;
+
+    .content {
+      background: $bgColor;
+      color: $textColor;
+      transition: color 0.2s ease-in;
+      transition: background 0.2s ease-in;
+      border-color: $textColor;
     }
+
+    .content .protected {
+      background: $bgColor;
+      color: $textColor;
+    }
+
+    .content .inverted {
+      background: $textColor;
+      color: $bgColor;
+    }
+
+    .content .light {
+      color: $lightColor;
+    }
+
+    .content:link {
+      color: $textColor;
+    }
+  }
 }
