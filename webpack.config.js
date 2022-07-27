@@ -12,7 +12,10 @@ module.exports = {
     main: "./src/main.js",
   },
   output: {
-    path: path.resolve(__dirname, "./dist/"),
+    filename: '[name].js?t=' + new Date().getTime(),
+    chunkFilename: '[name]-chunk.js?t=' + new Date().getTime(),
+    publicPath: './',
+    path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [
