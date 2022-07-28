@@ -1,5 +1,5 @@
 import { createI18n } from 'vue-i18n'
-import messages  from './configs/en.js';
+import messages  from './languages/en.js';
 
 const loadedLanguages = ['en'];
 
@@ -24,7 +24,7 @@ const loadLanguageAsync = ((lang) => {
     if (loadedLanguages.includes(lang)) {
         return Promise.resolve(setLanguage(lang));
     }
-    return import(`./configs/${lang}.js`).then(
+    return import(`./languages/${lang}.js`).then(
         messages => {
             console.log(`Lazy Loading: ${lang}`);
             i18n.global.setLocaleMessage(lang, messages.default);
