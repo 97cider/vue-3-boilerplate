@@ -33,7 +33,6 @@ const locales = [
 ]
 
 const UpdateLocale = ((lang) => {
-    console.log(`dispatching locale ${lang.locale}`);
     store.dispatch('locale/localeChange', lang.locale);
 });
 

@@ -26,7 +26,6 @@ const loadLanguageAsync = ((lang) => {
     }
     return import(`./languages/${lang}.js`).then(
         messages => {
-            console.log(`Lazy Loading: ${lang}`);
             i18n.global.setLocaleMessage(lang, messages.default);
             loadedLanguages.push(lang);
             return setLanguage(lang);
