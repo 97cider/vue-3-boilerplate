@@ -3,7 +3,7 @@
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/97cider/vue-3-boilerplate/graphs/commit-activity) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-This is a pretty heavily opinionated boilerplate designed to tackle some of the problems I've encountered when trying to spin up a vue project. This project does not use the vue-cli, as I think(?) I still prefer the older way of setting up a project. I've tried to include a few features that I've always wished I had integrated earlier into the project.
+This is a pretty heavily opinionated boilerplate designed to tackle some of the problems I've encountered when trying to spin up a vue project. This project does not use the vue-cli, as I think(?) I still prefer the older way of setting up a project. I've tried to include a few features that I've always wished I had integrated earlier when starting a project.
 
 ## Features
 The current version of `vue-3-boilerplate` contains the following features:<br>
