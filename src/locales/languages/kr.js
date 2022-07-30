@@ -1,12 +1,11 @@
 export default {
         "header": {
-            "tagline": "빨리, 간단히, 용이하게."
+            "tagline": "빠르고, 단순하고, 쉬워요.."
         },
         "home": {
             "welcome": "vue-3-boilerplate에 오신 것을 환영합니다!"
         },
         "about": {
-            "reason": "This is a standard vue boilerplate website made because I literally have to spend like 5 hours just setting up a website.(but in korean)",
             "features": {
                 "header": "Features",
                 "feature-one": "dev 서버가 포함된 webpack5입니다",
