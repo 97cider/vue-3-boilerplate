@@ -8,13 +8,13 @@ export default {
         "about": {
             "reason": "This is a standard vue boilerplate website made because I literally have to spend like 5 hours just setting up a website.(but in korean)",
             "features": {
-                "header": "기능",
-                "feature-one": "webpack 5 bundling and dev server",
-                "feature-two": "light/dark mode via scss mixin",
-                "feature-three": "localization via vue-i18n",
-                "feature-four": "babel, eslint, stylelint",
-                "feature-five": "routing via vue-router",
-                "feature-six": "store via vuex",
+                "header": "Features",
+                "feature-one": "dev 서버가 포함된 webpack5입니다",
+                "feature-two": "scss mixin을 통해 light/dark 모드입니다",
+                "feature-three": "vue-i18n을 통한 현지화입니다",
+                "feature-four": "babel, eslint 그리고 stylelint입니다",
+                "feature-five": "vue-router을 통한 라우팅입니다",
+                "feature-six": "vuex를 통해 저장합니다",
             }
         }
 }

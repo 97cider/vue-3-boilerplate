@@ -26,31 +26,7 @@
   });
 
   onBeforeMount(() => {
-    if (localStorage.theme) {
-      store.dispatch("theme/themeChange", localStorage.theme);
-    } else {
-      localStorage.theme = store.state.theme.currentTheme;
-    }
-    if (localStorage.locale) {
-      store.dispatch("locale/localeChange", localStorage.locale);
-    } else {
-      localStorage.locale = store.state.locale.currentLocale;
-    }
     loadLanguageAsync(localStorage.locale);
-  });
-
-  watch(theme, () => {
-    localStorage.theme = store.state.theme.currentTheme;
-  });
-
-  watch(vLocale, () => {
-    localStorage.locale = store.state.locale.currentLocale;
-    loadLanguageAsync(localStorage.locale);
-  })
-
-  computed(() => {
-    localStorage.theme = store.state.theme.currentTheme;
-    localStorage.locale = store.state.locale.currentLocale;
   });
 </script>>
 

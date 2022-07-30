@@ -1,6 +1,5 @@
 <template>
     <div class="about">
-        <h2>{{ t('about.reason') }}</h2><br>
         <h2>{{ t('about.features.header')}}:</h2>
         <ul>
             <li>{{ t('about.features.feature-one')}}</li>

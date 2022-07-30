@@ -1,5 +1,7 @@
+import { loadLanguageAsync } from '../../locales';
+
 const state = () => ({
-    currentLocale: 'en'
+    currentLocale: localStorage.locale !== undefined ? localStorage.locale : 'en'
 })
 
 const getters = {
@@ -19,6 +21,8 @@ const mutations = {
     changeLocale (state, locale)
     {
         state.currentLocale = locale;
+        localStorage.locale = state.currentLocale;
+        loadLanguageAsync(localStorage.locale);
     }
 }
 

@@ -1,5 +1,5 @@
 const state = () => ({
-    currentTheme: 'life'
+    currentTheme: localStorage.theme !== undefined ? localStorage.theme : 'life'
 })
 
 const getters = {
@@ -19,6 +19,7 @@ const mutations = {
     changeTheme (state, theme)
     {
         state.currentTheme = theme;
+        localStorage.theme = state.currentTheme;
     }
 }
 

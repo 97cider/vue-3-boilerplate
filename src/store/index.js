@@ -7,4 +7,4 @@ export default createStore({
         theme,
         locale
     }
-})
+});
