@@ -1,5 +1,5 @@
 # vue-3-boilerplate
-## Welcome to `vue-3-boilerplate`!<br>
+## Welcome to vue-3-boilerplate!<br>
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/97cider/vue-3-boilerplate/graphs/commit-activity) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
@@ -30,7 +30,7 @@ Builds the project for **production**, and serves the `/dist` directory using `h
 ```
 npm run start
 ```
-Builds the project for **development** and serves it via the Webpack 5 Dev Server. Code is not uglified, and in-line source maps are included.Uses the `.env` value `DEV_SERVER_PORT` to determine hosted port.
+Builds the project for **development** and serves it via the Webpack 5 Dev Server. Code is not uglified, and in-line source maps are included. Uses the `.env` value `DEV_SERVER_PORT` to determine hosted port.
 ```
 npm run lint
 ```
