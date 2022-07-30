@@ -7,19 +7,18 @@
 
 <script setup>
 import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n({ useScope: 'global' }) // use as global scope
+const { t } = useI18n({ useScope: 'global' })
 </script>
 
 <style lang="scss">
   .home {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     padding: 30px;
   }
+
   .home-image {
     width: 160px;
     height: 160px;

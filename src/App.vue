@@ -11,7 +11,7 @@
 <script setup>
   import VHeader from './components/VHeader.vue';
   import VFooter from './components/VFooter.vue';
-  import { computed, onBeforeMount, watch} from '@vue/runtime-core';
+  import { computed, onBeforeMount } from '@vue/runtime-core';
   import { useStore } from 'vuex';
   import { loadLanguageAsync } from './locales';
 
@@ -19,10 +19,6 @@
 
   const theme = computed(() => {
     return store.state.theme.currentTheme;
-  });
-
-  const vLocale = computed(() => {
-    return store.state.locale.currentLocale;
   });
 
   onBeforeMount(() => {

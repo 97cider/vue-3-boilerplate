@@ -4,11 +4,11 @@
   "description": "a very barebones vue-3 boilerplate for quick projects",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
     "lint": "eslint --ext .js,.vue src",
     "lint-style": "stylelint \"./src/**/*.vue\" \"./src/**/*.scss\" --fix",
-    "start": "webpack serve --open --config webpack.dev.js",
-    "preview": "npm run build && http-server ./dist -d"
+    "start": "cross-env NODE_ENV=development webpack serve --open --config webpack.dev.js",
+    "preview": "cross-env NODE_ENV=production npm run build && http-server ./dist -d"
   },
   "keywords": [
     "vue3"
@@ -25,6 +25,7 @@
     "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "dotenv": "^16.0.1",
     "eslint": "^8.20.0",

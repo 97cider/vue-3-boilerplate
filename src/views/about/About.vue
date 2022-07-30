@@ -18,11 +18,12 @@ const { t } = useI18n({ useScope: 'global' })
 </script>
 
 <style lang="scss">
-    .about {
-        padding: 30px;
-        text-align: center;
-    }
-    li {
-        font-family: "Franklin Gothic Medium", Arial, sans-serif;
-    }
+  .about {
+    padding: 30px;
+    text-align: center;
+  }
+
+  li {
+    font-family: "Franklin Gothic Medium", Arial, sans-serif;
+  }
 </style>

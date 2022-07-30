@@ -3,8 +3,8 @@
   @each $theme-name, $map in $themes {
     @include theme($theme-name,
     map-get($map, "content", "bg"),
-      map-get($map, "content", "color"),
-      map-get($map, "content", "light-color"));
+    map-get($map, "content", "color"),
+    map-get($map, "content", "light-color"));
   }
 }
 

@@ -3,9 +3,12 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin  = require('mini-css-extract-plugin');
 const htmlWebpackPlugin  = require('html-webpack-plugin');
 
-const path = require("path");
+const dotenv = require('dotenv');
+const path = require('path');
 
-require('dotenv').config()
+dotenv.config({
+  path: path.resolve(__dirname, `.env.${process.env.NODE_ENV}`)
+});
 
 module.exports = {
   entry: {
